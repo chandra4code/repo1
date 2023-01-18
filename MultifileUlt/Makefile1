@@ -1,0 +1,18 @@
+ult1_nomock_objects = File1.o File2.o Ult1.o
+
+ult1_mock2_objects = File1.o MockFile2.o Ult1.o
+
+ULT1_MOCK2_FLAGS = -DMOCK_FILE2
+
+all: Ult1NoMock.exe Ult1Mock2.exe
+
+Ult1NoMock.exe: $(ult1_nomock_objects)
+	$(CC) -c  $(ULT1_NOMOCK_FLAGS) $(CFLAGS) $(CPPFLAGS) $< -o $@
+	$(CC) $(ult1_nomock_objects) -g -o Ult1NoMock.exe
+
+Ult1Mock2.exe: $(ult1_mock2_objects)
+	$(CC) -c  $(ULT1_MOCK2_FLAGS) $(CFLAGS) $(CPPFLAGS) $< -o $@
+	$(CC) $(ult1_mock2_objects)  -g -o Ult1Mock2.exe
+
+clean:
+	rm -f *.o *.exe *~ .*~
