@@ -14,10 +14,10 @@ ver2: mock at leaf
 ------------------
 ```c
 $ ./Ult1Ver2.exe
-```c
+```
 
 ver3: mock at next level
 ------------------------
 ```c
 $ ./Ult1Ver3.exe
-```c
+```
