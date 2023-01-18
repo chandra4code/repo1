@@ -1,4 +1,6 @@
-$ make clean Ult1Ver1.exe Ult1Ver2.exe Ult1Ver3.exe
+To build:
+make clean Ult1Ver1.exe Ult1Ver2.exe Ult1Ver3.exe
+
 ver1: no mocking
 ----------------
 $ ./Ult1Ver1.exe
